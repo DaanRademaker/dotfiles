@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sh ~/dotfiles/install/software.sh
+# sh ~/dotfiles/install/software.sh
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- STARTING CONFIG SETUP                                       -"
@@ -33,6 +33,12 @@ if [ -f ~/.config/spotifyd/spotifyd.conf ]; then
 fi
 ln -fs ~/dotfiles/config/.config/spotifyd/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 
+echo ".dconf settings"
+
+if [ -f ~/.dmenurc ]; then
+  mv ~/.dmenurc ~/.dmenurc-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles/config/.dmenurc ~/.dmenurc
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- FINISHED CONFIG SETUP                                       -"

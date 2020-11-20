@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "                                                               " 
 echo "- STARTING SOFTWARE INSTALLATION                              -"
+echo "                                                               "
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
 echo "make yay install without prompts"
@@ -34,7 +36,11 @@ curl -s https://www.getdnote.com/install | sh
 echo "glow"
 yay -S glow
 
+echo "rofi"
+yay -S rofi
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "                                                               " 
 echo "- FINISHED SOFTWARE INSTALLATION                              -"
+echo "-                                                              "
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
