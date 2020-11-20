@@ -4,9 +4,6 @@ echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- STARTING SOFTWARE INSTALLATION                              -"
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
-echo "make yay install without prompts"
-yay --save --answerclean All --answerdiff All --save --nocleanmenu --nodiffmenu
-
 echo "powerline fonts"
 sudo pacman -S --noconfirm powerline-fonts
 
@@ -20,20 +17,16 @@ echo "get antigen plugin manager"
 curl -L git.io/antigen > antigen.zsh
 
 echo "oh-my-zsh"
-yay -S oh-my-zsh-git
+yaourt -S --noconfirm oh-my-zsh-git
 
 echo "todoist"
-yay -S todoist
+yaourt -S --noconfirm todoist
 
 echo "peco"
-yay -S peco
+yaourt -S --noconfirm peco
 
 echo "dnote"
 curl -s https://www.getdnote.com/install | sh
-
-echo "glow"
-yay -S glow
-
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- FINISHED SOFTWARE INSTALLATION                              -"

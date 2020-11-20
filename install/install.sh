@@ -26,3 +26,14 @@ if [ -f ~/.Xresources ]; then
   mv ~/.Xresources ~/.Xresources-pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles/config/.Xresources ~/.Xresources
+
+echo "spotifyd settings"
+if [ -f ~/.config/spotifyd/spotifyd.conf ]; then
+  mv ~/.config/spotifyd/spotifyd.conf ~/.config/spotifyd/spotifyd.conf-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles/config/.config/spotifyd/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
+
+
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "- FINISHED CONFIG SETUP                                       -"
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
