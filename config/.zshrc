@@ -31,7 +31,7 @@ antigen theme agnoster
 antigen apply
 
 # add autocomplete for the todoist app
-source "/src/github.com/sachaos/todoist/todoist_functions.sh"
+source ~/dotfiles/config/todoist_functions.sh
 
 # add some stuff for dnote
 highlight_dnote_view() {

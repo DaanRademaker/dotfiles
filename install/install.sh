@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# sh ~/dotfiles/install/software.sh
+sh ~/dotfiles/install/software.sh
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- STARTING CONFIG SETUP                                       -"
@@ -30,6 +30,9 @@ ln -fs ~/dotfiles/config/.Xresources ~/.Xresources
 echo "spotifyd settings"
 if [ -f ~/.config/spotifyd/spotifyd.conf ]; then
   mv ~/.config/spotifyd/spotifyd.conf ~/.config/spotifyd/spotifyd.conf-pre-dotfiles-bak
+else
+  mkdir ~/.config/spotifyd &&
+  touch ~/.config/spotifyd/spotifyd.conf
 fi
 ln -fs ~/dotfiles/config/.config/spotifyd/spotifyd.conf ~/.config/spotifyd/spotifyd.conf
 
@@ -39,6 +42,10 @@ if [ -f ~/.dmenurc ]; then
   mv ~/.dmenurc ~/.dmenurc-pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles/config/.dmenurc ~/.dmenurc
+
+
+echo "set zsh as default shell"
+sudo chsh -s /usr/bin/zsh root
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- FINISHED CONFIG SETUP                                       -"

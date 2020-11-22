@@ -31,13 +31,16 @@ echo "peco"
 yay -S peco
 
 echo "dnote"
-curl -s https://www.getdnote.com/install | sh
+sudo curl -s https://www.getdnote.com/install | sh
 
 echo "glow"
 yay -S glow
 
 echo "rofi"
 yay -S rofi
+
+echo "antigen"
+curl -L git.io/antigen > antigen.zsh
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "                                                               " 
