@@ -16,7 +16,7 @@ echo "spotify daemon"
 sudo pacman -S --noconfirm spotifyd 
 
 echo "spotify tui client"
-sudo pacman -S --noconfirm spotify-tui
+yay -S  spotify-tui
 
 echo "get antigen plugin manager"
 curl -L git.io/antigen > antigen.zsh
