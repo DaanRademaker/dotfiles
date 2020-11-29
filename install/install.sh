@@ -59,12 +59,18 @@ ln -fs ~/dotfiles/config/.config/compton.conf ~/.config/compton.conf
 
 echo "polybar config"
 
+mkdir $HOME/.config/polybar
+
+touch $HOME/.config/polybar/config
+
 if [ -f ~/.config/polybar/config ]; then
   mv ~/.config/polybar/config ~/.config/polybar/config-pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles/config/.config/polybar/config ~/.config/polybar/config
 
 echo "polybar startup script"
+
+touch $HOME/.config/polybar/launch.sh
 
 if [ -f ~/.config/polybar/launch.sh ]; then
   mv ~/.config/polybar/launch.sh ~/.config/polybar/launch.sh-pre-dotfiles-bak
