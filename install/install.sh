@@ -59,7 +59,7 @@ ln -fs ~/dotfiles/config/.config/compton.conf ~/.config/compton.conf
 
 echo "polybar config"
 
-mkdir $HOME/.config/polybar
+mkdir -p $HOME/.config/polybar
 
 touch $HOME/.config/polybar/config
 
@@ -76,6 +76,17 @@ if [ -f ~/.config/polybar/launch.sh ]; then
   mv ~/.config/polybar/launch.sh ~/.config/polybar/launch.sh-pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles/config/.config/polybar/launch.sh ~/.config/polybar/launch.sh
+
+echo "rofi config"
+
+mkdir -p  $HOME/.config/rofi
+
+touch $HOME/.config/rofi/config.rasi
+
+if [ -f ~/.config/rofi/config.rasi ]; then
+  mv ~/.config/rofi/config.rasi ~/.config/rofi/config.rasi-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles/config/.config/rofi/config.rasi ~/.config/rofi/config.rasi
 
 
 
