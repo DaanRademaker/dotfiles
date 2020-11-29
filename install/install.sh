@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sh ~/dotfiles/install/software.sh
+#sh ~/dotfiles/install/software.sh
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- STARTING CONFIG SETUP                                       -"
@@ -42,6 +42,35 @@ if [ -f ~/.dmenurc ]; then
   mv ~/.dmenurc ~/.dmenurc-pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles/config/.dmenurc ~/.dmenurc
+
+echo ".xinitrc settings"
+
+if [ -f ~/.xinitrc ]; then
+  mv ~/.xinitrc ~/.xinitrc-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles/config/.xinitrc ~/.xinitrc
+
+echo "set compton"
+
+if [ -f ~/.config/compton.conf ]; then
+  mv ~/.config/compton.conf ~/.config/compton.conf-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles/config/.config/compton.conf ~/.config/compton.conf
+
+echo "polybar config"
+
+if [ -f ~/.config/polybar/config ]; then
+  mv ~/.config/polybar/config ~/.config/polybar/config-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles/config/.config/polybar/config ~/.config/polybar/config
+
+echo "polybar startup script"
+
+if [ -f ~/.config/polybar/launch.sh ]; then
+  mv ~/.config/polybar/launch.sh ~/.config/polybar/launch.sh-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles/config/.config/polybar/launch.sh ~/.config/polybar/launch.sh
+
 
 
 echo "set zsh as default shell"
